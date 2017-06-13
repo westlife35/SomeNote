@@ -1,4 +1,5 @@
 ###20170522 bug of cuda8
+
 I find the bugs of cuda8 on windows.
 And I send mail to three of four people to say it. No one reply me.
 I issue the bug on NVIDIA/nv-caffe, the issue is closed by the author. He says: nv-caffe is not supporting windows.(I just want to tell someone in NVIDIA the bugs of cuda...sad)
@@ -34,4 +35,5 @@ Recently, I just update my demo in windows.
 
 
 ###20170531 the strange memort_data_layer in caffe
+
 1, Today I find another strange problem: I am using the memort_data_layer in caffe. For memory_data_param, there is no option for tranpose( tranpose: true or transpose:false). But I find the using of tranpose: true will influence the final output feature! So I just read the code of caffe, but I find no memory_data_param in memort_data_layer, and the memory_data_param only used in Inner_product_layer. But the memory_data_param(transpose: true) in memort_data_layer do really influence the final feature.
