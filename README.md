@@ -37,3 +37,12 @@ Recently, I just update my demo in windows.
 # 20170531 the strange memort_data_layer in caffe
 
 1, Today I find another strange problem: I am using the memort_data_layer in caffe. For memory_data_param, there is no option for tranpose( tranpose: true or transpose:false). But I find the using of tranpose: true will influence the final output feature! So I just read the code of caffe, but I find no memory_data_param in memort_data_layer, and the memory_data_param only used in Inner_product_layer. But the memory_data_param(transpose: true) in memort_data_layer do really influence the final feature.
+
+# 20170603 the paper released by tencent AL lab(beijing) about face detection
+
+https://arxiv.org/abs/1706.01061
+
+1, like other paper released by other companys in China, there is no any innovation.
+2, the paper says they are the first one to use center loss in face detection.(The last year I use center loss for face detection. Adding loss is so easy, nearly no any work load)  
+3, the paper says: we design a new multi-task loss function based on a newly developed center loss to supervise the feature learning, as elaborated in the next section.  (it is only add a loss weight.....this can be called design a new multi-task loss?! The first time I saw the design a new multi-task loss function, I am expecting something new, but with no any new things)
+4, the paper says: we obtain a true positive rate of 98.74% of the discrete ROC curve at 2000 false positives. (It is true and I check the number in FDDB of there ROC.txt) But, why 2000? In general , it is 1000 or even less and 2000 is not that practical in real world.....
